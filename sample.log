@@ -1,0 +1,6 @@
+2024-01-02 12:31:10 INFO Server started successfully
+2024-01-02 12:31:12 INFO User login success
+2024-01-02 12:31:15 WARN Connection retry attempt
+2024-01-02 12:31:18 ERROR Database connection timeout
+2024-01-02 12:31:22 INFO Request processed
+2024-01-02 12:31:30 CRITICAL Service crashed unexpectedly

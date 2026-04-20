@@ -1,0 +1,12 @@
+2026-03-04 18:00:00 INFO Auth service started
+2026-03-04 18:00:10 INFO LOGIN SUCCESS user=alice ip=192.168.1.10
+2026-03-04 18:00:20 INFO LOGOUT user=alice
+2026-03-04 18:01:05 WARN LOGIN FAILED user=bob reason=invalid_password ip=192.168.1.20
+2026-03-04 18:01:10 WARN LOGIN FAILED user=bob reason=invalid_password ip=192.168.1.20
+2026-03-04 18:01:15 WARN LOGIN FAILED user=bob reason=invalid_password ip=192.168.1.20
+2026-03-04 18:01:20 ERROR Account locked user=bob due to too_many_failed_attempts
+2026-03-04 18:02:00 INFO PASSWORD RESET REQUEST user=bob email_sent=true
+2026-03-04 18:03:10 INFO LOGIN SUCCESS user=charlie ip=192.168.1.30
+2026-03-04 18:04:00 WARN Suspicious activity detected ip=10.0.0.5 attempts=25
+2026-03-04 18:04:05 CRITICAL Blocking IP address 10.0.0.5 due to brute-force attack
+2026-03-04 18:05:00 INFO Security report generated

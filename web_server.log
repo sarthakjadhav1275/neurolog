@@ -1,0 +1,15 @@
+2026-03-04 09:00:00 INFO Web server starting on port 8080
+2026-03-04 09:00:02 INFO Connected to database 'users_db'
+2026-03-04 09:01:10 INFO GET /login 200 OK user=alice
+2026-03-04 09:01:15 INFO GET /dashboard 200 OK user=alice
+2026-03-04 09:02:01 WARN Slow response for /reports latency=1520ms
+2026-03-04 09:02:30 INFO POST /api/upload 201 Created user=bob
+2026-03-04 09:03:11 ERROR Failed to send email notification: SMTP timeout
+2026-03-04 09:03:45 INFO Retrying email notification
+2026-03-04 09:03:50 INFO Email notification sent successfully
+2026-03-04 09:04:20 WARN High CPU usage detected: 87%
+2026-03-04 09:05:00 INFO Health check passed
+2026-03-04 09:06:30 ERROR Payment service returned 502 Bad Gateway
+2026-03-04 09:06:35 INFO Retrying payment request
+2026-03-04 09:06:40 INFO Payment request succeeded on retry
+2026-03-04 09:07:00 INFO Web server running normally

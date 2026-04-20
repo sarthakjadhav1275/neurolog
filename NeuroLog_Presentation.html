@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroLog - Failure Pattern & Log Insight System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .feature-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #4a90e2;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .feature-card h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card h3::before {
+            content: "🔧";
+            font-size: 1.5rem;
+        }
+        
+        .feature-card:nth-child(2) h3::before { content: "🔍"; }
+        .feature-card:nth-child(3) h3::before { content: "📊"; }
+        .feature-card:nth-child(4) h3::before { content: "🎨"; }
+        .feature-card:nth-child(5) h3::before { content: "🔒"; }
+        .feature-card:nth-child(6) h3::before { content: "📈"; }
+        
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .tech-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .tech-item {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .tech-item h4 {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .use-cases {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .case-item {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid #e9ecef;
+            transition: all 0.3s ease;
+        }
+        
+        .case-item:hover {
+            border-color: #4a90e2;
+            transform: scale(1.05);
+        }
+        
+        .case-item h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: white;
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>NeuroLog</h1>
+            <p>Failure Pattern & Log Insight System - AI-Powered Log Analysis Platform</p>
+        </header>
+        
+        <div class="content">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">🎯 Core Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>User Authentication & Management</h3>
+                    <ul class="feature-list">
+                        <li>Secure Login System with PBKDF2 hashing</li>
+                        <li>User Registration with validation</li>
+                        <li>Persistent session management</li>
+                        <li>Activity history tracking per user</li>
+                        <li>Rate limiting & brute force protection</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Log Processing Engine</h3>
+                    <ul class="feature-list">
+                        <li>Multiple format support (Strict & Flexible)</li>
+                        <li>Intelligent parsing of timestamp, level, message</li>
+                        <li>Automatic service/component inference</li>
+                        <li>Error handling and recovery</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Dual Anomaly Detection</h3>
+                    <ul class="feature-list">
+                        <li>Rule-based keyword matching</li>
+                        <li>ML-based Isolation Forest with TF-IDF</li>
+                        <li>Configurable sensitivity parameters</li>
+                        <li>Real-time anomaly scoring</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Advanced Analytics</h3>
+                    <ul class="feature-list">
+                        <li>KMeans clustering for failure patterns</li>
+                        <li>Recurring pattern analysis</li>
+                        <li>Time-series trend visualization</li>
+                        <li>Correlation analysis of failure pairs</li>
+                        <li>Service-level analytics breakdown</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Interactive Dashboard</h3>
+                    <ul class="feature-list">
+                        <li>Global multi-dimensional filtering</li>
+                        <li>Tabbed interface for organized views</li>
+                        <li>Real-time filter updates across tabs</li>
+                        <li>Export in CSV, Markdown, HTML formats</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h3>Model Evaluation</h3>
+                    <ul class="feature-list">
+                        <li>Performance metrics (Precision, Recall, F1)</li>
+                        <li>Manual labeling for ground truth</li>
+                        <li>Comparative analysis (Rule vs ML)</li>
+                        <li>Labeled dataset support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-section">
+            <h2 style="text-align: center; margin-bottom: 30px;">🔧 Technical Capabilities</h2>
+            
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <h4>🚀 Performance</h4>
+                    <p>Scalable processing of large log files with memory optimization</p>
+                </div>
+                
+                <div class="tech-item">
+                    <h4>🔒 Security</h4>
+                    <p>SQLite database with industry-standard encryption</p>
+                </div>
+                
+                <div class="tech-item">
+                    <h4>🌐 Compatibility</h4>
+                    <p>Cross-platform support (Windows, macOS, Linux)</p>
+                </div>
+                
+                <div class="tech-item">
+                    <h4>📱 UI/UX</h4>
+                    <p>Modern responsive design with interactive elements</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="use-cases">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 30px;">📈 Business Use Cases</h2>
+            
+            <div class="case-grid">
+                <div class="case-item">
+                    <h4>🔧 DevOps & SRE</h4>
+                    <p>Monitor production systems and detect issues early</p>
+                </div>
+                
+                <div class="case-item">
+                    <h4>🐛 Application Debugging</h4>
+                    <p>Quickly identify root causes of software failures</p>
+                </div>
+                
+                <div class="case-item">
+                    <h4>🛡️ Security Analysis</h4>
+                    <p>Detect potential security incidents in logs</p>
+                </div>
+                
+                <div class="case-item">
+                    <h4>📊 Performance Monitoring</h4>
+                    <p>Track system performance degradation patterns</p>
+                </div>
+                
+                <div class="case-item">
+                    <h4>📋 Compliance Auditing</h4>
+                    <p>Maintain audit trails of system activities</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content" style="background: linear-gradient(135deg, #28a745 0%, #20bf6b 100%); color: white; margin-top: 30px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">🎯 Business Value</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="text-align: center;">
+                    <h3>⏱️ Reduced Downtime</h3>
+                    <p>Faster issue detection and resolution</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3>⚡ Operational Efficiency</h3>
+                    <p>Automated analysis reduces manual review time</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3>💰 Cost Savings</h3>
+                    <p>Proactive prevention reduces incident impact</p>
+                </div>
+                <div style="text-align: center;">
+                    <h3>🎓 Knowledge Transfer</h3>
+                    <p>Pattern insights prevent future issues</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; 2024 NeuroLog - Transforming Raw Logs into Actionable Intelligence</p>
+    </footer>
+</body>
+</html>

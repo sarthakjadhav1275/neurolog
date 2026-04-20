@@ -1,0 +1,15 @@
+2026-03-04 14:00:00 INFO api-gateway Received request /place-order orderId=1001
+2026-03-04 14:00:00 INFO order-service Creating order id=1001
+2026-03-04 14:00:01 INFO inventory-service Reserving items for orderId=1001
+2026-03-04 14:00:02 WARN inventory-service Low stock for product=SKU-123 remaining=3
+2026-03-04 14:00:03 INFO payment-service Initiating payment for orderId=1001
+2026-03-04 14:00:05 ERROR payment-service Payment gateway timeout for orderId=1001
+2026-03-04 14:00:06 INFO payment-service Retrying payment for orderId=1001
+2026-03-04 14:00:08 INFO payment-service Payment successful for orderId=1001
+2026-03-04 14:00:09 INFO order-service Marking order id=1001 as CONFIRMED
+2026-03-04 14:00:10 INFO notification-service Sending confirmation email for orderId=1001
+2026-03-04 14:05:00 INFO api-gateway Received request /place-order orderId=1002
+2026-03-04 14:05:01 INFO order-service Creating order id=1002
+2026-03-04 14:05:02 ERROR inventory-service Insufficient stock for product=SKU-999
+2026-03-04 14:05:03 WARN order-service Cancelling order id=1002 due to inventory failure
+2026-03-04 14:05:04 INFO notification-service Sending failure email for orderId=1002

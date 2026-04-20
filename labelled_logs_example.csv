@@ -1,0 +1,17 @@
+timestamp,level,message,label
+2026-03-04 10:00:01,INFO,Application started successfully,False
+2026-03-04 10:00:05,INFO,User 'alice' logged in,False
+2026-03-04 10:01:10,WARN,High memory usage detected: 78%,False
+2026-03-04 10:02:30,ERROR,Failed to connect to database: timeout,True
+2026-03-04 10:03:45,INFO,Retrying database connection,False
+2026-03-04 10:03:50,ERROR,Database connection failed again,True
+2026-03-04 10:04:10,CRITICAL,Application shutting down due to repeated failures,True
+2026-03-04 11:00:10,ERROR,Database connection failed: ECONNREFUSED,True
+2026-03-04 11:00:20,WARN,Retrying database connection (attempt 1),False
+2026-03-04 11:00:25,ERROR,Database connection failed: ECONNREFUSED,True
+2026-03-04 11:00:40,ERROR,Database authentication failed for user 'report_user',True
+2026-03-04 11:01:00,CRITICAL,Aborting batch job 'daily_report' due to repeated database failures,True
+2026-03-04 18:01:05,WARN,LOGIN FAILED user=bob reason=invalid_password ip=192.168.1.20,False
+2026-03-04 18:01:20,ERROR,Account locked user=bob due to too_many_failed_attempts,True
+2026-03-04 18:04:00,WARN,Suspicious activity detected ip=10.0.0.5 attempts=25,False
+2026-03-04 18:04:05,CRITICAL,Blocking IP address 10.0.0.5 due to brute-force attack,True

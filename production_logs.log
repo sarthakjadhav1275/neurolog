@@ -1,0 +1,24 @@
+2024-01-01 09:10:01 INFO Server boot sequence initialized
+2024-01-01 09:10:03 INFO Configuration loaded successfully
+2024-01-01 09:10:10 INFO HTTP request /home processed
+2024-01-01 09:11:12 INFO User login success: user=rahul
+2024-01-01 09:11:25 WARN Connection retry attempt
+2024-01-01 09:11:28 WARN Slow DB response detected
+2024-01-01 09:11:30 ERROR Database connection timeout
+2024-01-01 09:11:31 ERROR DB reconnect failed
+2024-01-01 09:11:34 CRITICAL Service crashed unexpectedly
+2024-01-01 09:11:38 INFO Restarting service instance
+2024-01-01 09:11:44 INFO Service restored successfully
+
+2024-01-01 10:02:10 INFO HTTP /api/v1/products fetched
+2024-01-01 10:02:11 WARN High memory usage detected
+2024-01-01 10:02:14 ERROR Cache write failure
+2024-01-01 10:02:16 ERROR Cache write failure
+2024-01-01 10:02:20 CRITICAL Cache process crashed
+
+2024-01-01 11:05:50 INFO User logout user=rahul
+2024-01-01 11:06:01 INFO New user signup user=aarti
+2024-01-01 11:06:11 WARN Multiple failed login attempts
+2024-01-01 11:06:13 ERROR Unauthorized access blocked
+2024-01-01 11:06:15 ERROR Unauthorized access blocked
+2024-01-01 11:06:18 CRITICAL Security breach pattern detected
